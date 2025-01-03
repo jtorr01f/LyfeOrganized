@@ -1,7 +1,7 @@
 .nav-wrapper {
     width: 100%;
     padding: 1rem;
-    background-color: blueviolet;
+    background-color: rgb(135, 24, 238);;
 }
 .nav-links {
     display: flex;

@@ -15,13 +15,10 @@ export const Grid: React.FC<GridProps> = ({
     ModuleRegistry.registerModules([AllCommunityModule]);
 
     return (
-        <div
-            // define a height because the Data Grid will fill the size of the parent container
-            style={{ height: 500 }}
-        >
+        <div style={{ height: 600 }}>
             <AgGridReact
-                    rowData={rowData}
-                    columnDefs={columnDefs}
+                rowData={rowData}
+                columnDefs={columnDefs}
             />
         </div>
     )
