@@ -1,0 +1,25 @@
+.home-wrapper {
+	padding: 1rem;
+	height: 100vh;
+}
+
+.no-events-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.no-events {
+	height: 50%;
+	width: 50%;
+
+	border: 1px solid lightgray;
+	border-radius: 8px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
