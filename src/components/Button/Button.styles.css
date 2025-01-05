@@ -1,0 +1,21 @@
+.btn {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: rgb(135, 24, 238);
+    color: white;
+    border-color: none;
+}
+
+.btn-primary:hover {
+    background-color: rgb(96, 18, 170);
+}
+
+.btn-secondary {
+    background-color: rgb(255, 255, 255);
+    color: rgb(135, 24, 238);
+    border-color: rgb(135, 24, 238);
+}

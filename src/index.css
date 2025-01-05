@@ -49,3 +49,29 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.text-input {
+    padding: 0.6rem;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.btn {
+	padding: 0.6rem 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.btn-primary {
+	background-color: rgb(135, 24, 238);
+	color: white;
+	border-color: rgb(135, 24, 238);;
+}
+.btn-primary:hover {	
+	background-color: rgb(96, 18, 170);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+	background-color: rgb(135, 24, 238);
+	color: white;
+	border-color: rgb(135, 24, 238);
+}

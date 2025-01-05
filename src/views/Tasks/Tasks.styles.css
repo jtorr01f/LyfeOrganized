@@ -8,12 +8,62 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
-    margin: 0 0 3rem 0;
-    border-bottom: 1px solid lightgray;
 }
 
 .tasks-header {
     font-size: 2rem;
     font-weight: 700;
     font-style: normal;
+}
+
+.error-message-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.error-messages {
+    margin: 4px;
+}
+
+.error-message {
+    color: red;
+}
+
+.search-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    border-top: 1px solid lightgray;
+}
+
+#task-search {
+    width: 30%;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.task-type-dropdown-wrapper {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    padding: 1rem;
+}
+.task-type-dropdown {
+    width: 100%;
+}
+
+.task-modal-body-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.task-input-wrapper {
+    width: 100%;
 }

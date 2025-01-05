@@ -1,30 +1,45 @@
-import React from 'react';
-import { Modal } from 'react-bootstrap';
-import './Modal.styles.css';
-import Button from '../Button/Button.component.tsx';
+import React, { ReactNode } from "react";
+import Button from "../Button/Button.component.tsx";
+import "./Modal.styles.css";
 
-type FooterButton = {
-    text: string;
-    variant: string;
-    onClick: () => void;
+type ModalProps = {
+    show: boolean;
+    onClose: () => void;
+    header: ReactNode;
+    body: ReactNode;
+    footerButtons: {
+        id: string;
+        text: string;
+        variant: string;
+        onClick: () => void;
+    }[];
+    size: string;
+    ref: any;
 };
 
-function CustomModal({ show, handleClose, header, body, footerButtons }) {
-    return (
-        <div className="modal-wrapper">
-            <Modal centered show={show} onHide={handleClose}>
-                <Modal.Header>
-                  <Modal.Title>{header}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>{body}</Modal.Body>
-                <Modal.Footer>
-                    {footerButtons.map((button: FooterButton, index: number) => (
-                        <Button key={index} text={button.text} variant={button.variant} onClick={button.onClick} />
-                    ))}
-                </Modal.Footer>
-            </Modal>
+const Modal = ({ show, header, body, footerButtons, size, ref } : ModalProps) => (
+    <div className={`modal-bg ${show ? "show" : "none"}`}>
+        <div ref={ref} className={`modal-content ${size}`}>
+            <div className="modal-header">
+                <p className="modal-title">{header}</p>
+            </div>
+            <div className="modal-body">
+                {body}
+            </div>
+            <div className="modal-footer">
+                {footerButtons.map((button) => (
+                    <span key={button.id} className="modal-button">
+                        <Button 
+                            id={button.id} 
+                            variant={button.variant} 
+                            onClick={button.onClick} 
+                            text={button.text} 
+                        />
+                    </span>
+                ))}
+            </div>
         </div>
-    );
-}
+    </div>
+)
 
-export default CustomModal;
+export default Modal;

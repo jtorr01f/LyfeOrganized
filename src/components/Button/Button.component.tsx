@@ -1,26 +1,11 @@
 import React from "react";
-import { Button as BootstrapButton } from "react-bootstrap";
+import "./Button.styles.css";
 
-const Button = ({ key, text, variant, onClick }) => {
+const Button = ({ id, text, variant, onClick }) => {
     return (
-        <>
-            <style type="text/css">
-                {`
-                    .btn-primary {
-                      background-color: rgb(135, 24, 238);
-                      color: white;
-                      border: none;
-                    }
-                    .btn-primary:hover {
-                      background-color: rgb(96, 18, 170);
-                    }
-                `}
-            </style>
-                
-            <BootstrapButton key={key} variant={variant} onClick={onClick}>
-              {text}
-            </BootstrapButton>
-        </>
+      <button id={id} className={`btn btn-${variant}`} onClick={onClick}>
+        {text}
+      </button>
     );
 }
 

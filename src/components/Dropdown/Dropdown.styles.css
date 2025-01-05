@@ -1,0 +1,23 @@
+.dropdown {
+    position: relative;
+    padding: 0.6rem;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 95%;
+}
+
+.dropdown-options {
+    position: absolute;
+    width: 200px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1;
+}
+
+.dropdown-option {
+    padding: 0.6rem;
+    border-bottom: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+}
