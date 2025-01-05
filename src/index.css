@@ -54,6 +54,8 @@ table {
     padding: 0.6rem;
     border: 1px solid lightgray;
     border-radius: 5px;
+	font-size: large;
+	font-weight: 400;
 }
 
 .btn {

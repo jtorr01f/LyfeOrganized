@@ -29,6 +29,7 @@ const ModalBody = ({ taskValue, onChange, errors, typeValue, setTypeValue  }) =>
                 value={typeValue}
                 placeholder="Select Type"
                 onClick={setTypeValue}
+                useSearch
             />
             <div className="error-messages">
                 {errors.map((error) => (
@@ -149,13 +150,13 @@ const Tasks = () => {
                     <ModalBody 
                         taskValue={taskValue} 
                         onChange={(e) => setTaskValue(e.target.value)} 
-                        errors={taskErrors} 
-                        typeValue={typeValue} 
+                        errors={taskErrors}
+                        typeValue={typeValue}
                         setTypeValue={setTypeValue}
                     />
                 )}
                 footerButtons={footerButtons}
-                size="md"
+                size="sm"
             />
     </div>
     );
